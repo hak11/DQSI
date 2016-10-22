@@ -17,17 +17,17 @@
         <div class="form-group">
           <label for="input" class="col-sm-3 control-label text-right">Lokasi :</label>
           <div class="col-sm-9">
-            <input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+            <input type="text" id="input" class="form-control" value="Jakarta" disabled required="required" pattern="" title="">
           </div>
         </div>
         <hr>
         <div class="form-group">
           <label for="input" class="col-sm-3 control-label text-right">Bengkel :</label>
           <div class="col-sm-3">
-            <input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+            <input type="text" name="" id="input" class="form-control" value="2101" disabled required="required" pattern="" title="">
           </div>
           <div class="col-sm-6">
-            <input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+            <input type="text" name="" id="input" class="form-control" value="DSO-SUNTER" disabled required="required" pattern="" title="">
           </div>
         </div>
       </div>
