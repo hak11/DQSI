@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 22 Okt 2016 pada 18.19
+-- Generation Time: 23 Okt 2016 pada 13.27
 -- Versi Server: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
@@ -23,6 +23,27 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `area`
+--
+
+CREATE TABLE `area` (
+  `id_area` int(11) NOT NULL,
+  `nama_area` varchar(50) NOT NULL,
+  `alamat` text,
+  `no_tlf` varchar(20) DEFAULT NULL,
+  `pic` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `area`
+--
+
+INSERT INTO `area` (`id_area`, `nama_area`, `alamat`, `no_tlf`, `pic`) VALUES
+(2101, 'DSO Sunter', 'Jakarta ', NULL, 'Hakim');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `user`
 --
 
@@ -31,6 +52,7 @@ CREATE TABLE `user` (
   `username` varchar(50) NOT NULL,
   `name` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
+  `id_area` int(11) NOT NULL,
   `admin` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -38,12 +60,18 @@ CREATE TABLE `user` (
 -- Dumping data untuk tabel `user`
 --
 
-INSERT INTO `user` (`id`, `username`, `name`, `password`, `admin`) VALUES
-(1, 'hakim', 'hakim', '1ee8d5229e78398cc1d2c7073ac7d490', 0);
+INSERT INTO `user` (`id`, `username`, `name`, `password`, `id_area`, `admin`) VALUES
+(1, 'hakim', 'hakim', '1ee8d5229e78398cc1d2c7073ac7d490', 2101, 0);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `area`
+--
+ALTER TABLE `area`
+  ADD PRIMARY KEY (`id_area`);
 
 --
 -- Indexes for table `user`
