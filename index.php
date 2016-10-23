@@ -1,3 +1,8 @@
+<?php  
+session_start();
+if (isset($_SESSION['username'])) {
+  # code...
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -75,7 +80,8 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Taufik Prabowo</p>
+          <p><?php echo strtoupper($_SESSION['name']) ?></p>
+          <p><?php echo strtoupper($_SESSION['nama_area']) ?></p>
         </div>
       </div>
       <!-- search form -->
@@ -328,3 +334,9 @@
 
 </body>
 </html>
+<?php  
+} else {
+    $_SESSION['errorlogin'] = true;
+      header('Location: login.php');
+}
+?>
