@@ -33,10 +33,15 @@
 <?php 
 session_start();
 if (isset($_SESSION['errorlogin'])) {
-  echo '<div class="alert alert-danger alert-dismissible">
-              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-              <h4><i class="icon fa fa-ban"></i> Terjadi Kesalahan!</h4>
-        </div>';
+  if ($_SESSION['errorlogin']==true) {
+    echo '<div class="alert alert-danger alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <h4><i class="icon fa fa-ban"></i> Terjadi Kesalahan!</h4>
+          </div>';
+      session_unset('errorlogin');
+  } else {
+      header('Location: index.php?dashboard');
+  }
 }
 ?>
     <form action="akses.php" method="post">

@@ -1,6 +1,6 @@
 <?php  
 session_start();
-if (isset($_SESSION['username'])) {
+if (isset($_SESSION['id_user'])) {
   # code...
 ?>
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ if (isset($_SESSION['username'])) {
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
   <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">
-
+  <link rel="stylesheet" href="dist/css/custom.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
