@@ -72,27 +72,65 @@
                     <div class="form-group">
                       <label for="input" class="col-sm-3 control-label">Nomer Rangka :</label>
                       <div class="col-sm-4">
-                        <input type="text" name="no_rangka" class="form-control" required="required">
+                        <select name="no_rangka" class="form-control">
+                        <?php
+                        $query = "SELECT chassis_no FROM main_master group by chassis_no";
+                        $val = mysqli_query($konek,$query);
+                        while($row=mysqli_fetch_array($val)) {
+                          ?>
+                          <option value="<?php echo $row['chassis_no'] ?>"><?php echo $row['chassis_no'] ?></option>
+                          <?php
+                        }
+                        ?>
+                        </select>
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="input" class="col-sm-3 control-label">Model :</label>
                       <div class="col-sm-4">
-                        <input type="text" name="model_mesin" class="form-control" required="required">
+                      <select name="model_mesin" class="form-control">
+                        <?php
+                        $query = "SELECT model_code FROM main_master group by model_code";
+                        $val = mysqli_query($konek,$query);
+                        while($row=mysqli_fetch_array($val)) {
+                          ?>
+                          <option value="<?php echo $row['model_code'] ?>"><?php echo $row['model_code'] ?></option>
+                          <?php
+                        }
+                        ?>
+                        </select>
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="input" class="col-sm-3 control-label">Nomer Mesin :</label>
                       <div class="col-sm-4">
-                        <input type="text" name="no_mesin" class="form-control" required="required">
+                      <select name="model_mesin" class="form-control">
+                        <?php
+                        $query = "SELECT eg_no FROM main_master group by eg_no";
+                        $val = mysqli_query($konek,$query);
+                        while($row=mysqli_fetch_array($val)) {
+                          ?>
+                          <option value="<?php echo $row['eg_no'] ?>"><?php echo $row['eg_no'] ?></option>
+                          <?php
+                        }
+                        ?>
+                        </select>
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="input" class="col-sm-3 control-label">Tipe Mesin :</label>
                       <div class="col-sm-4">
-                        <select name="tipe_mesin" class="form-control">
-                          <option value="">-</option>
-                        </select>
+                        <select name="model_mesin" class="form-control">
+                          <?php
+                          $query = "SELECT eg_type FROM main_master group by eg_type";
+                          $val = mysqli_query($konek,$query);
+                          while($row=mysqli_fetch_array($val)) {
+                            ?>
+                            <option value="<?php echo $row['eg_type'] ?>"><?php echo $row['eg_type'] ?></option>
+                            <?php
+                          }
+                          ?>
+                          </select>
                       </div>
                     </div>
                     <div class="form-group">

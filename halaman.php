@@ -1,4 +1,5 @@
 <?php  
+include "koneksi.php";
 
 if (isset($_GET['hal'])) {
 	$halaman = $_GET['hal'];
