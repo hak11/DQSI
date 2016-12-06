@@ -1,4 +1,4 @@
-
+<form action="../simpan_ldp.php" method="POST">
 <!-- Default box -->
 <div class="box">
   <div class="box-header with-border">
@@ -72,8 +72,9 @@
                     <div class="form-group">
                       <label for="input" class="col-sm-3 control-label">Nomer Rangka :</label>
                       <div class="col-sm-4">
-                        <select name="no_rangka" class="form-control">
-                        <?php
+                        <select name="no_rangka" class="select2-option form-control">
+                          <option value="">Silakan Pilih</option>
+                          <?php
                         $query = "SELECT chassis_no FROM main_master group by chassis_no";
                         $val = mysqli_query($konek,$query);
                         while($row=mysqli_fetch_array($val)) {
@@ -88,7 +89,8 @@
                     <div class="form-group">
                       <label for="input" class="col-sm-3 control-label">Model :</label>
                       <div class="col-sm-4">
-                      <select name="model_mesin" class="form-control">
+                      <select name="model_mesin" class="select2-option form-control">
+                        <option value="">Silakan Pilih</option>
                         <?php
                         $query = "SELECT model_code FROM main_master group by model_code";
                         $val = mysqli_query($konek,$query);
@@ -104,7 +106,8 @@
                     <div class="form-group">
                       <label for="input" class="col-sm-3 control-label">Nomer Mesin :</label>
                       <div class="col-sm-4">
-                      <select name="model_mesin" class="form-control">
+                      <select name="no_mesin" class=" select2-option form-control">
+                        <option value="">Silakan Pilih</option>
                         <?php
                         $query = "SELECT eg_no FROM main_master group by eg_no";
                         $val = mysqli_query($konek,$query);
@@ -120,7 +123,8 @@
                     <div class="form-group">
                       <label for="input" class="col-sm-3 control-label">Tipe Mesin :</label>
                       <div class="col-sm-4">
-                        <select name="model_mesin" class="form-control">
+                        <select name="tipe_mesin" class="form-control">
+                          <option value="">Silakan Pilih</option>
                           <?php
                           $query = "SELECT eg_type FROM main_master group by eg_type";
                           $val = mysqli_query($konek,$query);
@@ -167,16 +171,16 @@
                     <div class="form-group">
                       <label for="input" class="col-sm-3 control-label">Tanggal Penyerahan :</label>
                       <div class="col-sm-4">
-                        <input type="date" name="tanggal_penyerahan" class="form-control" required="required">
+                        <input type="text" data-date-format='dd-mm-yyyy' name="tanggal_penyerahan" class="datepicker form-control" required="required">
                       </div>
                       <div class="col-sm-4">
-                        <input type="checkbox" name="kirim" value="1">Belum Dikirim / Kendaraan Baru
+                        <input type="checkbox" name="stat_kirim" value="true">Belum Dikirim / Kendaraan Baru
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="input" class="col-sm-3 control-label">Tanggal perbaikan :</label>
                       <div class="col-sm-4">
-                        <input type="date" name="tanggal_perbaikan" class="form-control" required="required">
+                        <input type="text" data-date-format='dd-mm-yyyy' name="tanggal_perbaikan" class="datepicker form-control" required="required">
                       </div>
                     </div>
                     <div class="form-group">
@@ -331,31 +335,31 @@
                     <div class="form-group">
                       <label for="kondisi_kendaraan" class="col-sm-3 control-label">Permintaan Perbaikan :</label>
                       <div class="col-sm-5">
-                        <input type="checkbox" name="permintaan_perbaikan[]" >Ganti mobil<br>
-                        <input type="checkbox" name="permintaan_perbaikan[]" >Permintaan perbaikan sebelum problem terjadi<br>
-                        <input type="checkbox" name="permintaan_perbaikan[]" >Kesulitan dalam memperbaiki<br>
-                        <input type="checkbox" name="permintaan_perbaikan[]" >Tidak ada metode perbaikan<br>
-                        <input type="checkbox" name="permintaan_perbaikan[]" >Perbaikan membutuhkan waktu lama<br>
-                        <input type="checkbox" name="permintaan_perbaikan[]" >Perbaikan sementara (kemungkinan perbaikan ulang)
+                        <input type="checkbox" name="permintaan_perbaikan[]" value="Ganti mobil" >Ganti mobil<br>
+                        <input type="checkbox" name="permintaan_perbaikan[]" value="Permintaan perbaikan sebelum problem terjadi" >Permintaan perbaikan sebelum problem terjadi<br>
+                        <input type="checkbox" name="permintaan_perbaikan[]" value="Kesulitan dalam memperbaiki" >Kesulitan dalam memperbaiki<br>
+                        <input type="checkbox" name="permintaan_perbaikan[]" value="Tidak ada metode perbaikan" >Tidak ada metode perbaikan<br>
+                        <input type="checkbox" name="permintaan_perbaikan[]" value="Perbaikan membutuhkan waktu lama" >Perbaikan membutuhkan waktu lama<br>
+                        <input type="checkbox" name="permintaan_perbaikan[]" value="Perbaikan sementara (kemungkinan perbaikan ulang)" >Perbaikan sementara (kemungkinan perbaikan ulang)
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="kondisi_kendaraan" class="col-sm-3 control-label">Pengaruh Terhadap Market :</label>
                       <div class="col-sm-5">
-                        <input type="checkbox" name="permintaan_perbaikan[]" >Jumlah customer / VIP<br>
-                        <input type="checkbox" name="permintaan_perbaikan[]" >Berurusan dengan polisi<br>
-                        <input type="checkbox" name="permintaan_perbaikan[]" >Masuk media massa<br>
-                        <input type="checkbox" name="permintaan_perbaikan[]" >Berurusan dengan instansi pemerintahan<br>
-                        <input type="checkbox" name="permintaan_perbaikan[]" >Kasus hukum persidangan
+                        <input type="checkbox" name="pengaruh_terhadap_market[]" value="Jumlah customer / VIP" >Jumlah customer / VIP<br>
+                        <input type="checkbox" name="pengaruh_terhadap_market[]" value="Berurusan dengan polisi" >Berurusan dengan polisi<br>
+                        <input type="checkbox" name="pengaruh_terhadap_market[]" value="Masuk media massa" >Masuk media massa<br>
+                        <input type="checkbox" name="pengaruh_terhadap_market[]" value="Berurusan dengan instansi pemerintahan" >Berurusan dengan instansi pemerintahan<br>
+                        <input type="checkbox" name="pengaruh_terhadap_market[]" value="Kasus hukum persidangan" >Kasus hukum persidangan
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="kondisi_kendaraan" class="col-sm-3 control-label">Permintaan Konkret :</label>
                       <div class="col-sm-5">
-                        <input type="checkbox" name="permintaan_perbaikan[]" >Instruksi untuk diperbaiki<br>
-                        <input type="checkbox" name="permintaan_perbaikan[]" >Kirim service informasi<br>
-                        <input type="checkbox" name="permintaan_perbaikan[]" >Penanganan sementara (early resolution)<br>
-                        <input type="checkbox" name="permintaan_perbaikan[]" >Lain-lain
+                        <input type="checkbox" name="permintaan_konkret[]" value="Instruksi untuk diperbaiki" >Instruksi untuk diperbaiki<br>
+                        <input type="checkbox" name="permintaan_konkret[]" value="Kirim service informasi" >Kirim service informasi<br>
+                        <input type="checkbox" name="permintaan_konkret[]" value="Penanganan sementara (early resolution)" >Penanganan sementara (early resolution)<br>
+                        <input type="checkbox" name="permintaan_konkret[]" value="Lain-lain" >Lain-lain
                       </div>
                     </div>
                 </div>
@@ -391,3 +395,4 @@
   <!-- /.box-footer-->
 </div>
 <!-- /.box -->
+</form>

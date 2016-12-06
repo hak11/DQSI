@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 04 Des 2016 pada 19.41
+-- Generation Time: 06 Des 2016 pada 16.56
 -- Versi Server: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
@@ -40,6 +40,100 @@ CREATE TABLE `area` (
 
 INSERT INTO `area` (`id_area`, `nama_area`, `alamat`, `no_tlf`, `pic`) VALUES
 (2101, 'DSO Sunter', 'Jakarta ', NULL, 'Hakim');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `ldp`
+--
+
+CREATE TABLE `ldp` (
+  `id_ldp` int(11) NOT NULL,
+  `id_area` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `tanggal_pembuatan` date NOT NULL,
+  `no_rangka` varchar(50) NOT NULL,
+  `model` varchar(30) NOT NULL,
+  `no_mesin` varchar(20) NOT NULL,
+  `no_type` varchar(20) NOT NULL,
+  `part_penyebab` text NOT NULL,
+  `part_lokasi` text NOT NULL,
+  `problem` text NOT NULL,
+  `km` int(11) NOT NULL,
+  `tanggal_penyerahan` date NOT NULL,
+  `tanggal_perbaikan` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `ldp_detail`
+--
+
+CREATE TABLE `ldp_detail` (
+  `id` int(11) NOT NULL,
+  `id_ldp` int(11) NOT NULL,
+  `permintaan_perbaikan` text NOT NULL,
+  `pengaruh_market` text NOT NULL,
+  `permintaan_konkret` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `ldp_kerusakan`
+--
+
+CREATE TABLE `ldp_kerusakan` (
+  `id` int(11) NOT NULL,
+  `id_ldp` int(11) NOT NULL,
+  `customer_complaint` text NOT NULL,
+  `detail_kerusakan` text NOT NULL,
+  `kemungkinan_penyebab` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `ldp_kondisi_kendaraan`
+--
+
+CREATE TABLE `ldp_kondisi_kendaraan` (
+  `id` int(11) NOT NULL,
+  `id_ldp` int(11) NOT NULL,
+  `kondisi_jalan` varchar(50) NOT NULL,
+  `kondisi_kendaraan` text NOT NULL,
+  `kecepatan_kendaraan` int(11) NOT NULL,
+  `posisi_gigi` int(11) NOT NULL,
+  `t1` varchar(50) NOT NULL,
+  `t2` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `ldp_perbaikan`
+--
+
+CREATE TABLE `ldp_perbaikan` (
+  `id` int(11) NOT NULL,
+  `id_ldp` int(11) NOT NULL,
+  `prioritas` varchar(5) NOT NULL,
+  `perbaikan_tindakan` text NOT NULL,
+  `komentar_bengkel` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `ldp_upload`
+--
+
+CREATE TABLE `ldp_upload` (
+  `id` int(11) NOT NULL,
+  `id_ldp` int(11) NOT NULL,
+  `path_name` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -211,6 +305,42 @@ ALTER TABLE `area`
   ADD PRIMARY KEY (`id_area`);
 
 --
+-- Indexes for table `ldp`
+--
+ALTER TABLE `ldp`
+  ADD PRIMARY KEY (`id_ldp`);
+
+--
+-- Indexes for table `ldp_detail`
+--
+ALTER TABLE `ldp_detail`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `ldp_kerusakan`
+--
+ALTER TABLE `ldp_kerusakan`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `ldp_kondisi_kendaraan`
+--
+ALTER TABLE `ldp_kondisi_kendaraan`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `ldp_perbaikan`
+--
+ALTER TABLE `ldp_perbaikan`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `ldp_upload`
+--
+ALTER TABLE `ldp_upload`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `main_master`
 --
 ALTER TABLE `main_master`
@@ -232,6 +362,36 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for dumped tables
 --
 
+--
+-- AUTO_INCREMENT for table `ldp`
+--
+ALTER TABLE `ldp`
+  MODIFY `id_ldp` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `ldp_detail`
+--
+ALTER TABLE `ldp_detail`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `ldp_kerusakan`
+--
+ALTER TABLE `ldp_kerusakan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `ldp_kondisi_kendaraan`
+--
+ALTER TABLE `ldp_kondisi_kendaraan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `ldp_perbaikan`
+--
+ALTER TABLE `ldp_perbaikan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `ldp_upload`
+--
+ALTER TABLE `ldp_upload`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `main_master`
 --

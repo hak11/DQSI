@@ -12,6 +12,8 @@ if (isset($_SESSION['id_user'])) {
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="plugins/select2/select2.min.css">
+  <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="fa/css/font-awesome.min.css">
@@ -322,6 +324,8 @@ if (isset($_SESSION['id_user'])) {
 
 <script src="plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
+<script src="plugins/select2/select2.min.js"></script>
+<script src="plugins/datepicker/bootstrap-datepicker.js"></script>
 <!-- SlimScroll -->
 <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
@@ -331,7 +335,13 @@ if (isset($_SESSION['id_user'])) {
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 <script src="dist/js/custom.js"></script>
-
+<script>
+  $(document).ready(function(){
+    $('.select2-option').select2();
+      $(".datepicker").datepicker({ dateFormat: 'yy/mm/dd' }).datepicker("setDate", new Date());
+//    $('.datepicker').datepicker("setDate", new Date());
+  });
+</script>
 </body>
 </html>
 <?php  
