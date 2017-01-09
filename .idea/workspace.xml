@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d496e8f-9232-40ff-b086-2253ba53917c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/halaman/ldp_create.php" afterPath="$PROJECT_DIR$/halaman/ldp_create.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simpan_ldp.php" afterPath="$PROJECT_DIR$/simpan_ldp.php" />
     </list>
@@ -29,13 +28,13 @@
       <file leaf-file-name="ldp_create.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/halaman/ldp_create.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-106.57692">
-              <caret line="163" column="95" selection-start-line="163" selection-start-column="95" selection-end-line="163" selection-end-column="95" />
+            <state vertical-scroll-proportion="-13.076923">
+              <caret line="176" column="63" selection-start-line="176" selection-start-column="53" selection-end-line="176" selection-end-column="63" />
               <folding>
-                <marker date="1483977329091" expanded="true" signature="3984:4038" placeholder="SELECT chass..main_master..." />
-                <marker date="1483977329091" expanded="true" signature="4886:4940" placeholder="SELECT model..main_master..." />
-                <marker date="1483977329091" expanded="true" signature="5792:5836" placeholder="SELECT eg_no..main_master..." />
-                <marker date="1483977329091" expanded="true" signature="6671:6719" placeholder="SELECT eg_ty..main_master..." />
+                <marker date="1483981629524" expanded="true" signature="4009:4063" placeholder="SELECT chass..main_master..." />
+                <marker date="1483981629524" expanded="true" signature="4911:4965" placeholder="SELECT model..main_master..." />
+                <marker date="1483981629524" expanded="true" signature="5817:5861" placeholder="SELECT eg_no..main_master..." />
+                <marker date="1483981629524" expanded="true" signature="6696:6744" placeholder="SELECT eg_ty..main_master..." />
               </folding>
             </state>
           </provider>
@@ -44,9 +43,11 @@
       <file leaf-file-name="simpan_ldp.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/simpan_ldp.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23255815">
-              <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-              <folding />
+            <state vertical-scroll-proportion="-0.27906978">
+              <caret line="14" column="61" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
+              <folding>
+                <marker date="1483982794331" expanded="true" signature="1416:1638" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,9 +76,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1616" />
+    <option name="x" value="580" />
+    <option name="y" value="44" />
+    <option name="width" value="1111" />
     <option name="height" value="916" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -194,10 +195,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="916" extended-state="6" />
+    <frame x="580" y="44" width="1111" height="916" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26285347" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16365366" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -245,10 +246,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1483977329091" expanded="true" signature="3984:4038" placeholder="SELECT chass..main_master..." />
-            <marker date="1483977329091" expanded="true" signature="4886:4940" placeholder="SELECT model..main_master..." />
-            <marker date="1483977329091" expanded="true" signature="5792:5836" placeholder="SELECT eg_no..main_master..." />
-            <marker date="1483977329091" expanded="true" signature="6671:6719" placeholder="SELECT eg_ty..main_master..." />
+            <marker date="1483981629524" expanded="true" signature="4009:4063" placeholder="SELECT chass..main_master..." />
+            <marker date="1483981629524" expanded="true" signature="4911:4965" placeholder="SELECT model..main_master..." />
+            <marker date="1483981629524" expanded="true" signature="5817:5861" placeholder="SELECT eg_no..main_master..." />
+            <marker date="1483981629524" expanded="true" signature="6696:6744" placeholder="SELECT eg_ty..main_master..." />
           </folding>
         </state>
       </provider>
@@ -257,7 +258,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-          <folding />
+          <folding>
+            <marker date="1483982794331" expanded="true" signature="1416:1638" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -274,10 +277,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1483977329091" expanded="true" signature="3984:4038" placeholder="SELECT chass..main_master..." />
-            <marker date="1483977329091" expanded="true" signature="4886:4940" placeholder="SELECT model..main_master..." />
-            <marker date="1483977329091" expanded="true" signature="5792:5836" placeholder="SELECT eg_no..main_master..." />
-            <marker date="1483977329091" expanded="true" signature="6671:6719" placeholder="SELECT eg_ty..main_master..." />
+            <marker date="1483981629524" expanded="true" signature="4009:4063" placeholder="SELECT chass..main_master..." />
+            <marker date="1483981629524" expanded="true" signature="4911:4965" placeholder="SELECT model..main_master..." />
+            <marker date="1483981629524" expanded="true" signature="5817:5861" placeholder="SELECT eg_no..main_master..." />
+            <marker date="1483981629524" expanded="true" signature="6696:6744" placeholder="SELECT eg_ty..main_master..." />
           </folding>
         </state>
       </provider>
@@ -286,7 +289,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-          <folding />
+          <folding>
+            <marker date="1483982794331" expanded="true" signature="1416:1638" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -305,19 +310,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/halaman/ldp_create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-106.57692">
-          <caret line="163" column="95" selection-start-line="163" selection-start-column="95" selection-end-line="163" selection-end-column="95" />
-          <folding>
-            <marker date="1483977329091" expanded="true" signature="3984:4038" placeholder="SELECT chass..main_master..." />
-            <marker date="1483977329091" expanded="true" signature="4886:4940" placeholder="SELECT model..main_master..." />
-            <marker date="1483977329091" expanded="true" signature="5792:5836" placeholder="SELECT eg_no..main_master..." />
-            <marker date="1483977329091" expanded="true" signature="6671:6719" placeholder="SELECT eg_ty..main_master..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/akses.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.30232558">
@@ -328,11 +320,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/halaman/ldp_create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.076923">
+          <caret line="176" column="63" selection-start-line="176" selection-start-column="53" selection-end-line="176" selection-end-column="63" />
+          <folding>
+            <marker date="1483981629524" expanded="true" signature="4009:4063" placeholder="SELECT chass..main_master..." />
+            <marker date="1483981629524" expanded="true" signature="4911:4965" placeholder="SELECT model..main_master..." />
+            <marker date="1483981629524" expanded="true" signature="5817:5861" placeholder="SELECT eg_no..main_master..." />
+            <marker date="1483981629524" expanded="true" signature="6696:6744" placeholder="SELECT eg_ty..main_master..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/simpan_ldp.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23255815">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-          <folding />
+        <state vertical-scroll-proportion="-0.27906978">
+          <caret line="14" column="61" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
+          <folding>
+            <marker date="1483982794331" expanded="true" signature="1416:1638" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -51,7 +51,7 @@
                         <input type="text" disabled class="form-control" value="<?php echo strtoupper($_SESSION['nama_area']) ?>" required="required">
                       </div>
                       <div class="col-sm-4">
-                        <input type="text" disabled class="form-control" value="<?php echo date('d-m-Y') ?>" >
+                        <input type="text" readonly name="tanggal_pembuatan" class="form-control" value="<?php echo date('d-m-Y') ?>" >
                       </div>
                     </div>
                     <div class="form-group">
@@ -161,7 +161,7 @@
                             Problem
                             <div class="form-group">
                               <div class="col-sm-12">
-                                <input type="text" name="problem" class="form-control" required>
+                                <input type="text" name="problem" class="form-control" required >
                               </div>
                             </div>
                           </div>
