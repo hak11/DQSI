@@ -72,7 +72,7 @@
                     <div class="form-group">
                       <label for="input" class="col-sm-3 control-label">Nomer Rangka :</label>
                       <div class="col-sm-4">
-                        <select name="no_rangka" class="select2-option form-control">
+                        <select name="no_rangka" class="select2-option form-control" required>
                           <option value="">Silakan Pilih</option>
                           <?php
                         $query = "SELECT chassis_no FROM main_master group by chassis_no";
@@ -89,7 +89,7 @@
                     <div class="form-group">
                       <label for="input" class="col-sm-3 control-label">Model :</label>
                       <div class="col-sm-4">
-                      <select name="model_mesin" class="select2-option form-control">
+                      <select name="model_mesin" class="select2-option form-control" required>
                         <option value="">Silakan Pilih</option>
                         <?php
                         $query = "SELECT model_code FROM main_master group by model_code";
@@ -106,7 +106,7 @@
                     <div class="form-group">
                       <label for="input" class="col-sm-3 control-label">Nomer Mesin :</label>
                       <div class="col-sm-4">
-                      <select name="no_mesin" class=" select2-option form-control">
+                      <select name="no_mesin" class=" select2-option form-control" required>
                         <option value="">Silakan Pilih</option>
                         <?php
                         $query = "SELECT eg_no FROM main_master group by eg_no";
@@ -123,7 +123,7 @@
                     <div class="form-group">
                       <label for="input" class="col-sm-3 control-label">Tipe Mesin :</label>
                       <div class="col-sm-4">
-                        <select name="tipe_mesin" class="form-control">
+                        <select name="tipe_mesin" class="form-control" required>
                           <option value="">Silakan Pilih</option>
                           <?php
                           $query = "SELECT eg_type FROM main_master group by eg_type";
@@ -145,7 +145,7 @@
                             Part Penyebab
                             <div class="form-group">
                               <div class="col-sm-12">
-                                <input type="text" name="part_penyebab" class="form-control">
+                                <input type="text" name="part_penyebab" class="form-control" required>
                               </div>
                             </div>
                           </div>
@@ -153,7 +153,7 @@
                             Part Lokasi
                             <div class="form-group">
                               <div class="col-sm-12">
-                                <input type="text" name="part_lokasi" class="form-control">
+                                <input type="text" name="part_lokasi" class="form-control" required>
                               </div>
                             </div>
                           </div>
@@ -161,7 +161,7 @@
                             Problem
                             <div class="form-group">
                               <div class="col-sm-12">
-                                <input type="text" name="problem" class="form-control">
+                                <input type="text" name="problem" class="form-control" required>
                               </div>
                             </div>
                           </div>
