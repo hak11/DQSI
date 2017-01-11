@@ -3,8 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 06 Des 2016 pada 16.56
--- Versi Server: 10.1.13-MariaDB
+-- Generation Time: Jan 11, 2017 at 02:55 PM
+-- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -23,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `area`
+-- Table structure for table `area`
 --
 
 CREATE TABLE `area` (
@@ -35,7 +35,7 @@ CREATE TABLE `area` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `area`
+-- Dumping data for table `area`
 --
 
 INSERT INTO `area` (`id_area`, `nama_area`, `alamat`, `no_tlf`, `pic`) VALUES
@@ -44,7 +44,7 @@ INSERT INTO `area` (`id_area`, `nama_area`, `alamat`, `no_tlf`, `pic`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ldp`
+-- Table structure for table `ldp`
 --
 
 CREATE TABLE `ldp` (
@@ -59,15 +59,24 @@ CREATE TABLE `ldp` (
   `part_penyebab` text NOT NULL,
   `part_lokasi` text NOT NULL,
   `problem` text NOT NULL,
+  `status_kirim` tinyint(1) NOT NULL,
   `km` int(11) NOT NULL,
   `tanggal_penyerahan` date NOT NULL,
   `tanggal_perbaikan` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `ldp`
+--
+
+INSERT INTO `ldp` (`id_ldp`, `id_area`, `id_user`, `tanggal_pembuatan`, `no_rangka`, `model`, `no_mesin`, `no_type`, `part_penyebab`, `part_lokasi`, `problem`, `status_kirim`, `km`, `tanggal_penyerahan`, `tanggal_perbaikan`) VALUES
+(1, 2101, 1, '2017-01-11', 'MHKG2CJ1JEK027480', 'B100RS-GMDFJ', 'A025406', '1NR-VE', 'part penyebab', 'part lokasi', 'problem', 0, 130, '2017-01-11', '2017-01-11'),
+(2, 2101, 1, '2017-01-11', 'MHKG2CJ2JEK094936', 'B401RS-GMZFJ', 'A209652', 'K3-VE', 'a', 'b', 'c', 0, 40, '2017-01-11', '2017-01-11');
+
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ldp_detail`
+-- Table structure for table `ldp_detail`
 --
 
 CREATE TABLE `ldp_detail` (
@@ -78,10 +87,18 @@ CREATE TABLE `ldp_detail` (
   `permintaan_konkret` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `ldp_detail`
+--
+
+INSERT INTO `ldp_detail` (`id`, `id_ldp`, `permintaan_perbaikan`, `pengaruh_market`, `permintaan_konkret`) VALUES
+(1, 1, 'Permintaan perbaikan sebelum problem terjadi,Perbaikan membutuhkan waktu lama,Perbaikan sementara (kemungkinan perbaikan ulang)', 'Jumlah customer / VIP,Berurusan dengan polisi,Masuk media massa', 'Instruksi untuk diperbaiki,Kirim service informasi'),
+(2, 2, 'Ganti mobil,Permintaan perbaikan sebelum problem terjadi', 'Jumlah customer / VIP,Berurusan dengan instansi pemerintahan', 'Penanganan sementara (early resolution),Lain-lain');
+
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ldp_kerusakan`
+-- Table structure for table `ldp_kerusakan`
 --
 
 CREATE TABLE `ldp_kerusakan` (
@@ -92,10 +109,18 @@ CREATE TABLE `ldp_kerusakan` (
   `kemungkinan_penyebab` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `ldp_kerusakan`
+--
+
+INSERT INTO `ldp_kerusakan` (`id`, `id_ldp`, `customer_complaint`, `detail_kerusakan`, `kemungkinan_penyebab`) VALUES
+(1, 1, 'customer complaint', 'detail kerusakan', 'kemungkianan penyebab'),
+(2, 2, 'x', 'y', 'z');
+
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ldp_kondisi_kendaraan`
+-- Table structure for table `ldp_kondisi_kendaraan`
 --
 
 CREATE TABLE `ldp_kondisi_kendaraan` (
@@ -109,10 +134,18 @@ CREATE TABLE `ldp_kondisi_kendaraan` (
   `t2` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `ldp_kondisi_kendaraan`
+--
+
+INSERT INTO `ldp_kondisi_kendaraan` (`id`, `id_ldp`, `kondisi_jalan`, `kondisi_kendaraan`, `kecepatan_kendaraan`, `posisi_gigi`, `t1`, `t2`) VALUES
+(1, 1, 'rata', 'kecepatan_tetap,ada_muatan,saat_deselerasi', 40, 3, '0', '0'),
+(2, 2, 'rusak', 'saat_akselerasi,saat_deselerasi', 50, 3, '0', '0');
+
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ldp_perbaikan`
+-- Table structure for table `ldp_perbaikan`
 --
 
 CREATE TABLE `ldp_perbaikan` (
@@ -123,10 +156,18 @@ CREATE TABLE `ldp_perbaikan` (
   `komentar_bengkel` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `ldp_perbaikan`
+--
+
+INSERT INTO `ldp_perbaikan` (`id`, `id_ldp`, `prioritas`, `perbaikan_tindakan`, `komentar_bengkel`) VALUES
+(1, 1, 's', 'perbaikan yang dilakukan', 'komentar bengkel'),
+(2, 2, 'y', 'yu', 'ni');
+
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ldp_upload`
+-- Table structure for table `ldp_upload`
 --
 
 CREATE TABLE `ldp_upload` (
@@ -138,7 +179,7 @@ CREATE TABLE `ldp_upload` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `main_master`
+-- Table structure for table `main_master`
 --
 
 CREATE TABLE `main_master` (
@@ -150,7 +191,7 @@ CREATE TABLE `main_master` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `main_master`
+-- Dumping data for table `main_master`
 --
 
 INSERT INTO `main_master` (`id`, `model_code`, `chassis_no`, `eg_no`, `eg_type`) VALUES
@@ -242,7 +283,7 @@ INSERT INTO `main_master` (`id`, `model_code`, `chassis_no`, `eg_no`, `eg_type`)
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `master_mobil`
+-- Table structure for table `master_mobil`
 --
 
 CREATE TABLE `master_mobil` (
@@ -252,7 +293,7 @@ CREATE TABLE `master_mobil` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `master_mobil`
+-- Dumping data for table `master_mobil`
 --
 
 INSERT INTO `master_mobil` (`model_code`, `model_name`, `status`) VALUES
@@ -275,7 +316,7 @@ INSERT INTO `master_mobil` (`model_code`, `model_name`, `status`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -288,7 +329,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id`, `username`, `name`, `password`, `id_area`, `admin`) VALUES
@@ -366,27 +407,27 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `ldp`
 --
 ALTER TABLE `ldp`
-  MODIFY `id_ldp` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_ldp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `ldp_detail`
 --
 ALTER TABLE `ldp_detail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `ldp_kerusakan`
 --
 ALTER TABLE `ldp_kerusakan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `ldp_kondisi_kendaraan`
 --
 ALTER TABLE `ldp_kondisi_kendaraan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `ldp_perbaikan`
 --
 ALTER TABLE `ldp_perbaikan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `ldp_upload`
 --
