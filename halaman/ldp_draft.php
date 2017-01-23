@@ -49,6 +49,7 @@
                 <th>Kode Bengkel</th>
                 <th>Nama Bengkel</th>
                 <th>Nama Pembuat</th>
+                <th>Aksi</th>
               </tr>
             </thead>
             <tbody role="rowgroup">
@@ -71,6 +72,7 @@
                 <td><?php echo $row['id_area'] ?></td>
                 <td><?php echo $row['nama_area'] ?></td>
                 <td><?php echo $row['name'] ?></td>
+                <td><button type="button" class="btn btn-info">Detail</button> || <button type="button" class="btn btn-danger">Hapus</button></td>
               </tr>
               <?php
             }

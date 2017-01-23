@@ -2,7 +2,7 @@
 <!-- Default box -->
 <div class="box">
   <div class="box-header with-border">
-    <h3 class="box-title">Title</h3>
+    <h3 class="box-title">Reset Password</h3>
 
     <div class="box-tools pull-right">
       <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -12,7 +12,15 @@
     </div>
   </div>
   <div class="box-body">
-    Reset Password
+    <form class="" action="update_password.php" method="post">
+      <div class="form-group">
+        <label for="">Password Baru</label>
+        <input type="text" class="form-control" name="newpass" placeholder="Passoword Baru" require>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-success">Ubah Password</button>
+      </div>
+    </form>
   </div>
   <!-- /.box-body -->
   <div class="box-footer">

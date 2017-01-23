@@ -13,14 +13,14 @@
   </div>
   <div class="box-body">
     <div class="row">
-        <div class="col-md-2">
+        <!-- <div class="col-md-2">
           <button class="btn btn-block btn-warning">Refresh</button>
         </div>
         <div class="col-md-2">
           <button class="btn btn-block btn-primary">Save</button>
-        </div>
+        </div> -->
         <div class="col-md-2">
-          <button class="btn btn-block btn-success">Send</button>
+          <button class="btn btn-block btn-success">Submit Data</button>
         </div>
     </div>
     <hr>
