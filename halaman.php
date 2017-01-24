@@ -1,4 +1,4 @@
-<?php  
+<?php
 include "koneksi.php";
 
 if (isset($_GET['hal'])) {
@@ -23,10 +23,13 @@ switch ($halaman) {
 	case 'ldp_status':
 		include "halaman/ldp_status.php";
 	break;
+	case 'ldp_detail':
+		include "halaman/ldp_detail.php";
+	break;
 	case 'service_info':
 		include "halaman/service_info.php";
 	break;
-	
+
 	default:
 		include "halaman/dashboard.php";
 	break;

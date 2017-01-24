@@ -22,6 +22,9 @@
         <div class="col-md-2">
           <button class="btn btn-block btn-success">Submit Data</button>
         </div>
+        <div class="col-md-2">
+          <a href="./index.php?hal=ldp_create" class="btn btn-block btn-warning">Refresh</a>
+        </div>
     </div>
     <hr>
     <div class="row">
@@ -34,7 +37,7 @@
               <li><a href="#tab_3" data-toggle="tab">Kerusakan</a></li>
               <li><a href="#tab_4" data-toggle="tab">Perbaikan</a></li>
               <li><a href="#tab_5" data-toggle="tab">Lain-Lain</a></li>
-              <li><a href="#tab_6" data-toggle="tab">Upload Files</a></li>
+              <!-- <li><a href="#tab_6" data-toggle="tab">Upload Files</a></li> -->
             </ul>
             <div class="tab-content">
             <div class="tab-pane active" id="tab_1">
@@ -92,11 +95,11 @@
                       <select name="model_mesin" class="select2-option form-control" required>
                         <option value="">Silakan Pilih</option>
                         <?php
-                        $query = "SELECT model_code FROM main_master group by model_code";
+                        $query = "SELECT model_code,model_name FROM master_mobil group by model_code";
                         $val = mysqli_query($konek,$query);
                         while($row=mysqli_fetch_array($val)) {
                           ?>
-                          <option value="<?php echo $row['model_code'] ?>"><?php echo $row['model_code'] ?></option>
+                          <option value="<?php echo $row['model_code'] ?>"><?php echo $row['model_code'] ?> || <?php echo $row['model_name'] ?> </option>
                           <?php
                         }
                         ?>
@@ -238,17 +241,13 @@
                       <div class="form-group">
                         <label for="t1" class="col-sm-3 control-label">T1 :</label>
                         <div class="col-sm-4">
-                          <select name="t1" class="form-control">
-                            <option value="0">-</option>
-                          </select>
+                          <input type="text" class="form-control" name="t1">
                         </div>
                       </div>
                       <div class="form-group">
                         <label for="t2" class="col-sm-3 control-label">T2 :</label>
                         <div class="col-sm-4">
-                          <select name="t2" class="form-control">
-                            <option value="0">-</option>
-                          </select>
+                          <input type="text" class="form-control" name="t2">
                         </div>
                       </div>
                 </div>
@@ -366,7 +365,7 @@
                 </div>
               </div>
               </div>
-            <!--  -->
+            <!--
               <div class="tab-pane" id="tab_5">
                 <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -378,7 +377,7 @@
                 </div>
                 </div>
               </div>
-              </div>
+              </div>-->
             <!--  -->
               <!-- /.tab-pane -->
             </div>

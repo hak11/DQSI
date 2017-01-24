@@ -2,7 +2,7 @@
         <li class="header">MAIN NAVIGATION</li>
         <li>
           <a href="index.php?hal=dashboard">
-            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+            <i class="fa fa-dashboard"></i> <span>Home</span>
           </a>
         </li>
         <li>
@@ -15,23 +15,32 @@
             <i class="fa fa-edit"></i> <span>LPD CREATE</span>
           </a>
         </li>
-        <li>
+        <!--<li>
           <a href="index.php?hal=ldp_draft">
             <i class="fa fa-archive"></i> <span>LPD DRAFT</span>
           </a>
-        </li>
+        </li>-->
         <li>
           <a href="index.php?hal=ldp_status">
             <i class="fa fa-file-text-o"></i> <span>LPD STATUS</span>
           </a>
         </li>
-        <li>
+        <!--<li>
           <a href="index.php?hal=service_info">
             <i class="fa fa-file-audio-o"></i> <span>SERVICE INFORMATION</span>
           </a>
-        </li>
-        <li>
-          
+        </li>-->
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-files-o"></i>
+            <span>MASTER</span> 
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="../layout/top-nav.html"><i class="fa fa-circle-o"></i> Nomer Rangka</a></li>
+            <li><a href="../layout/boxed.html"><i class="fa fa-circle-o"></i> Model</a></li>
+            <li><a href="../layout/fixed.html"><i class="fa fa-circle-o"></i> Nomer Mesin</a></li>
+            <li><a href="../layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Tipe Mesin</a></li>
+          </ul>
         </li>
         <li>
           <a href="logout.php">
