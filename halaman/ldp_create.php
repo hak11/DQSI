@@ -20,7 +20,7 @@
           <button class="btn btn-block btn-primary">Save</button>
         </div> -->
         <div class="col-md-2">
-          <button class="btn btn-block btn-success">Submit Data</button>
+          <button class="btn btn-block btn-success">Simpan Data</button>
         </div>
         <div class="col-md-2">
           <a href="./index.php?hal=ldp_create" class="btn btn-block btn-warning">Refresh</a>

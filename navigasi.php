@@ -33,13 +33,16 @@
         <li class="treeview">
           <a href="#">
             <i class="fa fa-files-o"></i>
-            <span>MASTER</span> 
+            <span>MASTER</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../layout/top-nav.html"><i class="fa fa-circle-o"></i> Nomer Rangka</a></li>
-            <li><a href="../layout/boxed.html"><i class="fa fa-circle-o"></i> Model</a></li>
-            <li><a href="../layout/fixed.html"><i class="fa fa-circle-o"></i> Nomer Mesin</a></li>
-            <li><a href="../layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Tipe Mesin</a></li>
+            <li><a href="index.php?hal=master_rangka"><i class="fa fa-circle-o"></i> Nomer Rangka</a></li>
+            <li><a href="index.php?hal=master_model"><i class="fa fa-circle-o"></i> Model</a></li>
+            <li><a href="index.php?hal=master_no_mesin"><i class="fa fa-circle-o"></i> Nomer Mesin</a></li>
+            <li><a href="index.php?hal=master_tipe_mesin"><i class="fa fa-circle-o"></i> Tipe Mesin</a></li>
           </ul>
         </li>
         <li>

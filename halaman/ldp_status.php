@@ -42,12 +42,8 @@
                 <th>Tgl Kirim</th>
                 <th>Model</th>
                 <th>Pokok Laporan</th>
-                <th>Chasis No</th>
                 <th>Prioritas</th>
                 <th>Lokasi</th>
-                <th>Kode Bengkel</th>
-                <th>Nama Bengkel</th>
-                <th>Nama Pembuat</th>
                 <th>Aksi</th>
               </tr>
             </thead>
@@ -65,13 +61,9 @@
                 <td><?php echo $row['tanggal_pembuatan'] ?></td>
                 <td><?php echo $row['model'] ?></td>
                 <td><?php echo $row['problem'] ?></td>
-                <td><?php echo $row['no_rangka'] ?></td>
-                <td><?php echo $row['prioritas'] ?></td>
+                <td><?php echo strtoupper($row['prioritas']) ?></td>
                 <td><?php echo $row['alamat'] ?></td>
-                <td><?php echo $row['id_area'] ?></td>
-                <td><?php echo $row['nama_area'] ?></td>
-                <td><?php echo $row['name'] ?></td>
-                <td><a href="./index.php?hal=ldp_detail&id=<?php echo $row['id_ldp'] ?>" type="button" class="btn btn-info">Detail</a> || <button type="button" class="btn btn-danger">Hapus</button></td>
+                <td width="130px"><a href="./index.php?hal=ldp_detail&id=<?php echo $row['id_ldp'] ?>" type="button" class="btn btn-info btn-sm">Detail</a> || <button type="button" class="btn btn-danger btn-sm">Hapus</button></td>
               </tr>
               <?php
             }

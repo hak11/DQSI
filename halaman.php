@@ -26,6 +26,30 @@ switch ($halaman) {
 	case 'ldp_detail':
 		include "halaman/ldp_detail.php";
 	break;
+	case 'master_model':
+		include "halaman/master_model.php";
+	break;
+	case 'master_no_mesin':
+		include "halaman/master_no_mesin.php";
+	break;
+	case 'master_rangka':
+		include "halaman/master_rangka.php";
+	break;
+	case 'master_tipe_mesin':
+		include "halaman/master_tipe_mesin.php";
+	break;
+	case 'tambah_master_model':
+		include "halaman/tambah_master_model.php";
+	break;
+	case 'tambah_master_no_mesin':
+		include "halaman/tambah_master_no_mesin.php";
+	break;
+	case 'tambah_master_rangka':
+		include "halaman/tambah_master_rangka.php";
+	break;
+	case 'tambah_master_tipe_mesin':
+		include "halaman/tambah_master_tipe_mesin.php";
+	break;
 	case 'service_info':
 		include "halaman/service_info.php";
 	break;
