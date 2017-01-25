@@ -53,7 +53,7 @@
                 <td><?php echo $no ?></td>
                 <td><?php echo $row['model_code']?></td>
                 <td><?php echo $row['model_name']?></td>
-                <td width="130px"><button type="button" class="btn btn-danger btn-sm">Hapus</button></td>
+                <td width="130px"><a href="hapus_mobil.php?id=<?php echo $row['model_code'] ?>" type="button" class="btn btn-danger btn-sm">Hapus</a></td>
               </tr>
               <?php
               $no++;

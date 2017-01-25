@@ -9,11 +9,11 @@
         <form action="index.html" method="post">
             <div class="form-group">
               <label>Nomer Mesin</label>
-              <input type="text" class="form-control" id="" placeholder="">
+              <input type="text" class="form-control" id="" placeholder="" required="">
             </div>
             <div class="form-group">
               <label>Keterangan</label>
-              <textarea name="name" class="form-control" rows="8" cols="80"></textarea>
+              <textarea name="name" class="form-control" rows="8" cols="80" required=""></textarea>
             </div>
             <div class="form-group">
               <button type="button" class="btn btn-success" name="button">Simpan</button>

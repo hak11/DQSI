@@ -42,15 +42,15 @@
             </thead>
             <tbody role="rowgroup">
             <?php
-            $query = "SELECT * from master_mobil";
+            $query = "SELECT * from master_type";
             $eksekusi = mysqli_query($konek,$query);
             $no = 1;
             while($row=mysqli_fetch_array($eksekusi)){
               ?>
               <tr>
                 <td><?php echo $no ?></td>
-                <td><?php echo $row['model_code']?></td>
-                <td><?php echo $row['model_name']?></td>
+                <td><?php echo $row['no_type']?></td>
+                <td><?php echo $row['keterangan']?></td>
               </tr>
               <?php
               $no++;
